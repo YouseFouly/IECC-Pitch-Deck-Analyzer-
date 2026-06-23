@@ -17,7 +17,7 @@ def load_gemini_model():
     """
     Returns the Gemini model.
     """
-    return genai.GenerativeModel("gemini-2.5-pro")
+    return genai.GenerativeModel("gemini-2.5-flash-lite")
 
 
 # ==========================
