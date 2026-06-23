@@ -6,16 +6,7 @@ import google.generativeai as genai
 # Configure Gemini
 # ==========================
 
-working_dir = os.path.dirname(os.path.abspath(__file__))
-
-config_path = os.path.join(working_dir, "config.json")
-
-with open(config_path, "r") as f:
-    config_data = json.load(f)
-
-GOOGLE_API_KEY = config_data["GOOGLE_API_KEY"]
-
-genai.configure(api_key=GOOGLE_API_KEY)
+genai.configure(api_key=st.secrets["GOOGLE_API_KEY"])
 
 # ==========================
 # Load Model
