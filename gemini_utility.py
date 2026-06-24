@@ -84,14 +84,11 @@ def evaluate_pitch_deck(file_path):
 
     6. Final Summary
 """
-    response = model.generate_content([uploaded_file, 
-                                       prompt])
+    response = model.generate_content([prompt, uploaded_file])
     return response.text
 
 #Generic File Analysis
 def analyze_file(file_path, prompt):
     uploaded_file = upload_file(file_path)
-    response = model.generate_content([
-        uploaded_file, prompt
-    ])
+    response = model.generate_content([prompt, uploaded_file])
     return response.text
